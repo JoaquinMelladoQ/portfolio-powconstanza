@@ -1,9 +1,7 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Navbar } from '../components/Navbar'
 import { landingData } from '../lib/data.js'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -16,12 +14,12 @@ const Home: NextPage = () => {
             <div key={i}>
               <h2 className={styles.description}>{s.title}</h2>
               {s.works.map((w, i) => (
-                <div key={i} className={styles.grid}>
-                  <a href={w.path} className={styles.card}>
+                <Link key={i} href={w.path} className={styles.grid}>
+                  <div className={styles.card}>
                     <h2>{w.title}</h2>
                     <p>{w.description}</p>
-                  </a>
-                </div>
+                  </div>
+                </Link>
               ))}
             </div>
           ))}
