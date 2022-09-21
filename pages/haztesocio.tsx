@@ -2,39 +2,34 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Navbar } from '../components/Navbar'
-import { landingData } from '../lib/data.js'
+import { Navbar } from '../components/Navbar';
+import { uxCasesData } from '../lib/data.js'
 
-const Home: NextPage = () => {
+const HazteSocio: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
         <title>Paula Constanza</title>
-        <meta name="description" content="Home" />
+        <meta name="description" content="haztesocio" />
         <link rel="icon" href="/favicon.ico" />
-
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,900&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet" />
       </Head>
-
       <Navbar />
-      <main className={styles.main}>
-        {landingData.map((t, i) => (
+
+
+      <main>
+        {uxCasesData.map((c, i) => (
           <div key={i}>
-            <h1 className={styles.description}>{t.title}</h1>
-            <p className={styles.about}>{t.about}</p>
-            { t.subgroup.map((s, i) => (
+            <h2>{c.title}</h2>
+            { !c.subgroup && (
+              <p>{c.subtitle}</p> 
+            )} 
+            { c.subgroup && c.subgroup.map((s, i) => (
               <div key={i}>
-                <h2 className={styles.description}>{s.title}</h2>
-                {s.works.map((w, i) => (
-                  <div key={i} className={styles.grid}>
-                    <a href={w.path} className={styles.card}>
-                      <h2>{w.title}</h2>
-                      <p>{w.description}</p>
-                    </a>
-                  </div>
-                ))}
+                <h3>{s.title}</h3>
+                <p>{s.paragraph}</p>
               </div>
             ))}
           </div>
@@ -57,4 +52,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default HazteSocio;
