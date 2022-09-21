@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { Navbar } from '../components/Navbar'
 
 const Home: NextPage = () => {
   return (
@@ -15,11 +16,8 @@ const Home: NextPage = () => {
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet" />
       </Head>
 
+      <Navbar />
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Paula Constanza
-        </h1>
-
         <h2 className={styles.description}>
           Hello! I am Paula, UX/UI designer joining accesibility into service and product design.          
         </h2>
