@@ -32,18 +32,18 @@ const Home: NextPage = () => {
         </h2>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="haztesocio" className={styles.card}>
             <h2>Hazte Socio Coopeuch &rarr;</h2>
             <p>Upgrade of the enrollment journey towards a multiple offer of products from our members interests, based on collected data about their needs.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <a href="/simuladorunificado" className={styles.card}>
             <h2>Simulador Unificado &rarr;</h2>
             <p>Project to unify in a single credit simulator the experience of different offers according to the income profile of our users.</p>
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+            href="/contigosalud"
             className={styles.card}
           >
             <h2>Contigo Salud &rarr;</h2>
