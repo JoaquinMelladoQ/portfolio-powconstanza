@@ -47,8 +47,9 @@ const Home: NextPage = () => {
             href="https://github.com/vercel/next.js/tree/canary/examples"
             className={styles.card}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h2>Contigo Salud &rarr;</h2>
+            <p>A telemedicine solution for indigenous populations and other vulnerable situations during COVID-19 contingence. 
+B2B app developed from a whole pro bono iniciative.</p>
           </a>
         </div>
       </main>
