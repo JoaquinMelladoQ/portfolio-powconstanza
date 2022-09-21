@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Navbar } from '../components/Navbar'
+import { landingData } from '../lib/data.js'
 
 const Home: NextPage = () => {
   return (
@@ -19,38 +20,25 @@ const Home: NextPage = () => {
 
       <Navbar />
       <main className={styles.main}>
-        <h1 className={styles.description}>
-          Hello! I am Paula, UX/UI designer joining accesibility into service and product design.          
-        </h1>
-        <p className={styles.about}>
-          I enjoy gathering good quality services with people and environments needs for a better life. I also love diving, art history and bycicle rides.
-          Currently working at Coopeuch, a cooperative bank entity in Santiago, Chile. 
-        </p>
-
-        <h2 className={styles.description}>
-          UX case studies
-        </h2>
-
-        <div className={styles.grid}>
-          <a href="haztesocio" className={styles.card}>
-            <h2>Hazte Socio Coopeuch &rarr;</h2>
-            <p>Upgrade of the enrollment journey towards a multiple offer of products from our members interests, based on collected data about their needs.</p>
-          </a>
-
-          <a href="/simuladorunificado" className={styles.card}>
-            <h2>Simulador Unificado &rarr;</h2>
-            <p>Project to unify in a single credit simulator the experience of different offers according to the income profile of our users.</p>
-          </a>
-
-          <a
-            href="/contigosalud"
-            className={styles.card}
-          >
-            <h2>Contigo Salud &rarr;</h2>
-            <p>A telemedicine solution for indigenous populations and other vulnerable situations during COVID-19 contingence. 
-B2B app developed from a whole pro bono iniciative.</p>
-          </a>
-        </div>
+        {landingData.map((t, i) => (
+          <div key={i}>
+            <h1 className={styles.description}>{t.title}</h1>
+            <p className={styles.about}>{t.about}</p>
+            { t.subgroup.map((s, i) => (
+              <div key={i}>
+                <h2 className={styles.description}>{s.title}</h2>
+                {s.works.map((w, i) => (
+                  <div key={i} className={styles.grid}>
+                    <a href={w.path} className={styles.card}>
+                      <h2>{w.title}</h2>
+                      <p>{w.description}</p>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
       </main>
 
       <footer className={styles.footer}>
