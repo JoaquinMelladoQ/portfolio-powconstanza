@@ -16,7 +16,7 @@
 }
 
 .works {
-  margin-top: 2em;
+  margin-top: 1.6em;
 	padding-right: 2em;
 	position: relative;
   animation: movebtn 3s ease-in-out infinite;
@@ -25,9 +25,10 @@
 .works button {
   background-color: #130f40;
   color: #ffffff;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 2.2rem;
   border-radius: 5% 5%;
   border-color: #130f40;
+  cursor: pointer;
 }
 
 @keyframes movebtn {

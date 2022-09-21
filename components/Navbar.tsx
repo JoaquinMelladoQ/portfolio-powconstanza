@@ -6,12 +6,11 @@ export const Navbar = () => {
 	const router = useRouter()
 	const goingDown = () => {
 		window.scrollTo({
-			top: document.documentElement.scrollHeight,
+			top: document.documentElement.scrollHeight /2,
 			behavior: 'smooth',
 		});
 	}
 	const handleNavigation = () => {
-		console.log(router)
 		if (router.asPath === '/') {
 			goingDown()
 		} else {
