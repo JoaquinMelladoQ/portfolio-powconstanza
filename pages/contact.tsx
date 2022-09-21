@@ -19,8 +19,9 @@ const Contact: NextPage = () => {
       <Navbar />
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Paula Constanza
+          Contact 
         </h1>
+        <p>paucanales@ug.uchile.cl</p>
       </main>
 
       <footer className={styles.footer}>

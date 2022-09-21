@@ -5,7 +5,7 @@ export const Navbar = () => {
 	return (
 		<nav className={styles.navbar}>
 			<Link href="/">
-				<h1>Paula Constanza</h1>
+				<h2>Paula Constanza</h2>
 			</Link>
 			<Link href="/contact">
 				<h2>Contact</h2>

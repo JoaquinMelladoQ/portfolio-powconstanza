@@ -11,17 +11,18 @@ const Home: NextPage = () => {
         <title>Paula Constanza</title>
         <meta name="description" content="Home" />
         <link rel="icon" href="/favicon.ico" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,900&display=swap" rel="stylesheet"/>
       </Head>
 
       <Navbar />
       <main className={styles.main}>
-        <h2 className={styles.description}>
+        <h1 className={styles.description}>
           Hello! I am Paula, UX/UI designer joining accesibility into service and product design.          
-        </h2>
-        <p className={styles.description}>
+        </h1>
+        <p className={styles.about}>
           I enjoy gathering good quality services with people and environments needs for a better life. I also love diving, art history and bycicle rides.
           Currently working at Coopeuch, a cooperative bank entity in Santiago, Chile. 
         </p>
