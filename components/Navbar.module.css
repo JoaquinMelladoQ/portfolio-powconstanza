@@ -1,0 +1,11 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	padding-inline: 13.5em;
+}
+
+.navbar h2 {
+	font-size: 30px;
+	font-weight: bold;
+	cursor: pointer;
+}
