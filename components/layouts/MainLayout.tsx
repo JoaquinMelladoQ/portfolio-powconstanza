@@ -2,6 +2,7 @@ import styles from './MainLayout.module.css'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Navbar } from '../Navbar'
+import {useRouter} from 'next/router'
 
 export const MainLayout = ({ children }) => {
 	return (

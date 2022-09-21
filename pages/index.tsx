@@ -12,15 +12,19 @@ const Home: NextPage = () => {
           <p className={styles.about}>{t.about}</p>
           { t.subgroup.map((s, i) => (
             <div key={i}>
-              <h2 className={styles.description}>{s.title}</h2>
-              {s.works.map((w, i) => (
-                <Link key={i} href={w.path} className={styles.grid}>
-                  <div className={styles.card}>
-                    <h2>{w.title}</h2>
-                    <p>{w.description}</p>
-                  </div>
-                </Link>
-              ))}
+              <div className={styles.subtitle}>
+                <h2>{s.title}</h2>
+              </div>
+              <div className={styles.section}>
+                {s.works.map((w, i) => (
+                  <Link key={i} href={w.path} className={styles.grid}>
+                    <div className={styles.card}>
+                      <h2>{w.title}</h2>
+                      <p>{w.description}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           ))}
         </div>
